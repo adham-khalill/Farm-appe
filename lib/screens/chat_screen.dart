@@ -54,7 +54,10 @@ class _ChatScreenState extends State<ChatScreen> {
           appBar: AppBar(
             backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
             centerTitle: true,
-            title: const Text('Chat with Gemini'),
+            title: Image.asset(
+              'assets/images/Logo.png', // Replace Soila text with image
+              height: 90,               // Adjust the height as needed
+            ),
             actions: [
               if (chatProvider.inChatMessages.isNotEmpty)
                 Padding(
@@ -91,12 +94,12 @@ class _ChatScreenState extends State<ChatScreen> {
                   Expanded(
                     child: chatProvider.inChatMessages.isEmpty
                         ? const Center(
-                            child: Text('No messages yet'),
-                          )
+                      child: Text('No messages yet'),
+                    )
                         : ChatMessages(
-                            scrollController: _scrollController,
-                            chatProvider: chatProvider,
-                          ),
+                      scrollController: _scrollController,
+                      chatProvider: chatProvider,
+                    ),
                   ),
 
                   // input field

@@ -15,7 +15,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   // list of screens
   final List<Widget> _screens = [
-    const ChatHistoryScreen(),
+    const StatsScreen(),
     const ChatScreen(),
     const ProfileScreen(),
   ];
@@ -42,8 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               items: const [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.history),
-                  label: 'Chat History',
+                  icon: Icon(Icons.stacked_bar_chart_outlined),
+                  label: 'Stats',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.chat),
